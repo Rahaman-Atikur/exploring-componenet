@@ -3,36 +3,47 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <Student></Student>
+      <Student></Student>
+      <Student></Student>
       <Person></Person>
-      <Person></Person>
-      <Academic></Academic>
-      <Academic></Academic>
-      <Person></Person>
-      <Sports></Sports>
+      <Developer name="Mazumder" tech="JavaScript"></Developer>
+      <Developer name="Rajon" tech="Python"></Developer>
+      <Developer name="Rajon" tech="Java"></Developer>
     </>
+  )
+}
+function Student() {
+  return (
+    <div className='student'>
+      <p>Name:</p>
+      <p>Dept:</p>
+    </div>
   )
 }
 function Person() {
-  let age = 45;
-  let name = 'Jack'
+  let name = "Jack";
+  let age = 35;
+  const personStyle ={
+    color:"red",
+    textAlign:"center"
+  }
   return (
-    <p>I am a person:{name} -{age}</p>
-  )
-}
-function Sports() {
-  return (
-    <>
-      <h2>Cricket</h2>
-      <p>Playing and loosing</p>
-    </>
-  )
-}
-function Academic(){
-  return(
     <div>
-      <h1>MS Degree Holder</h1>
-      <p>Software Engineering Career is Opened and this is <br />
-      how can not be a good Software Engineer</p>
+      <p style={personStyle}>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  )
+}
+function Developer(props){
+  console.log(props);
+  return (
+    <div style={{
+      border:'2px solid green',
+      borderRadius:'20px'
+    }}>
+      <p>Name:{props.name}</p>
+      <p>TechStack:{props.tech}</p>
     </div>
   )
 }
