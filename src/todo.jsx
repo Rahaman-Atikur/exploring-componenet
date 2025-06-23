@@ -17,6 +17,17 @@
 //     }
 // }
 // Conditional Rendering
-export default function ToDo({task,isDone}){
-    return isDone && <li>{task}</li> 
+// export default function ToDo({task,isDone}){
+//     return isDone || <li>{task}</li> 
+// }
+// Conditional Rendering : Using Variable 
+export default function ToDo({ task, isDone }) {
+    let listItem;
+    if (isDone === true) {
+        listItem = <li>Done:{task}</li>
+    }
+    else{
+        listItem = <li>Pending:{task}</li>
+    }
+    return listItem
 }
