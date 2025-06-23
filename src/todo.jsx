@@ -15,5 +15,4 @@ export default function ToDo({task,isDone,isCompleted}){
             <li>{task} {isCompleted}</li>
         )
     }
-
 }
