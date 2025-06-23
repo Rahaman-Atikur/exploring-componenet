@@ -4,15 +4,19 @@
 //     )
 // }
 
-export default function ToDo({task,isDone,isCompleted}){
-    if(isDone){
-        return(
-            <li>{task} {isCompleted}</li>
-        )
-    }
-    else{
-        return(
-            <li>{task} {isCompleted}</li>
-        )
-    }
+// export default function ToDo({task,isDone,isCompleted}){
+//     if(isDone){
+//         return(
+//             <li>{task} {isCompleted}</li>
+//         )
+//     }
+//     else{
+//         return(
+//             <li>{task} {isCompleted}</li>
+//         )
+//     }
+// }
+// Conditional Rendering
+export default function ToDo({task,isDone}){
+    return isDone && <li>{task}</li> 
 }

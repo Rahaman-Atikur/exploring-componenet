@@ -4,9 +4,9 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
-      <ToDo task="Learn React" isDone={true} isCompleted="Yes"></ToDo>
-      <ToDo task="Learn React" isDone={false} isCompleted="Yes"></ToDo>
-      <ToDo task="Learn React" isDone={true} isCompleted="Yes"></ToDo>
+      <ToDo task="Learn React" isDone={true} ></ToDo>
+      <ToDo task="Learn React" isDone={false} ></ToDo>
+      <ToDo task="Learn React" isDone={true}></ToDo>
       {/* <Student></Student>
       <Student></Student>
       <Student></Student>
