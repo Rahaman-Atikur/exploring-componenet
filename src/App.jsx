@@ -2,6 +2,7 @@ import './App.css'
 import ToDo from './todo';
 import Actor from './actor';
 import Singer from './singer';
+import Books from './books';
 function App() {
   const actors = ["Bappa Raj","Alamgir","Manna"];
   const singers=[
@@ -9,12 +10,21 @@ function App() {
     {id:2,name:"Robiul",age:45},
     {id:3,name:"Reza",age:55}
   ]
+  const books=[
+    {bookName:"JavaScript",bookWriter:"Elon Mask"},
+    {bookName:"TypeScript",bookWriter:"Donald Trump"},
+    {bookName:"Java",bookWriter:"King Charls"},
+    {bookName:"Python",bookWriter:"Queen Elizabeth"}
+  ]
   return (
     <>
       <h1>Vite + React</h1>
       {
-        singers.map(singer=> <Singer key={singer.id} singer={singer} ></Singer>)
+        books.map(book=> <Books book={book}></Books>)
       }
+      {/* {
+        singers.map(singer=> <Singer key={singer.id} singer={singer} ></Singer>)
+      } */}
       {/* {
         actors.map(actor=><Actor actor={actor}></Actor>)
       } */}
